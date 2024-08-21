@@ -1,70 +1,105 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carregando...</title>
-    <link rel="shortcut icon" href="./assets/icons/Loading.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio ・ Home</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/flower.css" />
+  <link rel="stylesheet" href="styles/write.css" />
+  <link rel="stylesheet" href="styles/contatos.css" />
+  <link rel="shortcut icon" href="./assets/icons/home.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="loader-container">
-        <div class="loader"></div>
-        <div class="message">Carregando...</div>
+  <section>
+    <div id="home" class="page active">
+      <div class="container">
+        <header>
+          <p class="logo">Meu Portfólio</p>
+          <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#" onclick="showPage('conhecimentos')">Conhecimentos</a></li>
+            <li><a href="#" onclick="showPage('clientes')">Clientes</a></li>
+            <li><a href="#" onclick="showPage('contato')">Contato</a></li>
+          </ul>
+        </header>
+        <div class="content">
+          <h2>Olá! Sou o aceita</h2>
+          <p>Tenho experiência em tecnologia da informação, com um foco especial em desenvolvimento de software.
+            Atualmente, sou desenvolvedor de bots para Discord, plugins para Minecraft Java, e estou aprendendo a
+            criar
+            sites. Este é o meu portfólio, onde você pode conferir os projetos em que já trabalhei.</p>
+          <button onclick="showPage('contato')">Entrar em contato</button>
+        </div>
+        <div class="image">
+          <img src="./assets/aceitaUser.gif" />
+        </div>
+      </div>
     </div>
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-        }
-
-        .loader-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .loader {
-            border: 8px solid #f3f3f3;
-            border-top: 8px solid #3498db;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        .message {
-            margin-top: 20px;
-            font-size: 24px;
-            color: #333;
-        }
-    </style>
-    <script>
-        window.onload = function () {
-            setTimeout(function () {
-                window.location.href = "../nav/home/home.html";
-            }, 1500);
-        };
-    </script>
+    <div id="conhecimentos" class="page">
+      <div class="container">
+        <header>
+          <a href="#" class="logo">Meu Portfólio</a>
+          <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" class="active">Conhecimentos</a></li>
+            <li><a href="#" onclick="showPage('clientes')">Clientes</a></li>
+            <li><a href="#" onclick="showPage('contato')">Contato</a></li>
+          </ul>
+        </header>
+        <div class="content">
+          <h2>Conhecimentos</h2>
+          <p>
+            - 🌱 Atualmente sou desenvolvedor <strong>Java</strong>.
+            <br>
+            - ✨ Tenho um grande interesse em desenvolver addons para jogos, especialmente <strong>Minecraft</strong>.
+            <br>
+            - 💡 Sempre em busca de aprender novas tecnologias e aprimorar minhas habilidades.
+            <br>
+            - 🎮 Apaixonado por jogos e tecnologia.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="clientes" class="page">
+      <div class="container">
+        <header>
+          <a href="#" class="logo">Meu Portfólio</a>
+          <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('conhecimentos')">Conhecimentos</a></li>
+            <li><a href="#" class="active">Clientes</a></li>
+            <li><a href="#" onclick="showPage('contato')">Contato</a></li>
+          </ul>
+        </header>
+        <div class="content">
+          <h2>Clientes - Bots de Discord</h2>
+          <p>
+            Em desenvolvimento...
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="contato" class="page">
+      <div class="container">
+        <header>
+          <a href="#" class="logo">Meu Portfólio</a>
+          <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('conhecimentos')">Conhecimentos</a></li>
+            <li><a href="#" onclick="showPage('clientes')">Clientes</a></li>
+            <li><a href="#" class="active">Contato</a></li>
+          </ul>
+        </header>
+        <div class="content">
+          <h2>Contatos</h2>
+          <img class="discord" src="./assets/icons/discord.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="scripts/nav.js"></script>
 </body>
 
 </html>

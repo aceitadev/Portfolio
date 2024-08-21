@@ -1,0 +1,20 @@
+header .logo {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(120, end) 1s infinite;
+    color: #1f71a1;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
