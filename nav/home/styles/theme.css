@@ -1,0 +1,17 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.Theme-Dark {
+    background-color: #2E2E2E;
+    color: #fff;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.Theme-Light {
+    background-color: #daeef8;
+    color: #000000;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
